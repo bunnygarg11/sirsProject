@@ -13,29 +13,6 @@
                 'url'  : '/agenda'
             },
             {
-                'id'   : 'client-component',
-                'title': 'Clients',
-                'type' : 'collapse',
-                'icon' : 'people',
-                'url'  : '/clients',
-                'children': [
-                    {
-                        'id'   : 'client-info',
-                        'title': 'Info',
-                        'type' : 'item',
-                        'icon' : 'shopping_cart',
-                        'url'  : '/clients'
-                    },
-                    {
-                        'id'   : 'client-welcome',
-                        'title': 'welcome',
-                        'type' : 'item',
-                        'icon' : 'shopping_cart',
-                        'url'  : '/client-welcome'
-                    },
-                ]
-            },
-            {
                 'id'   : 'product-component',
                 'title': 'Products',
                 'type' : 'collapse',
@@ -75,7 +52,7 @@
             },
             {
                 'id'   : 'client-list',
-                'title': 'Client2',
+                'title': 'Client',
                 'type' : 'item',
                 'icon' : 'view_list',
                 'url'  : '/clientlist'

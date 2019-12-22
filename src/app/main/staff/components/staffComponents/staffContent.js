@@ -33,7 +33,7 @@ export default function MaterialTableDemo() {
 
   return (
     <MaterialTable
-      title={state.title}
+      title={''}
       columns={state.columns}
       data={state.data}
       actions={state.actions}

@@ -1,23 +1,21 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom';
 import {FuseUtils} from '@fuse';
-import {ClientsConfig} from 'app/main/clients/ClientsConfig';
 import {AgendaConfig} from 'app/main/agenda/AgendaConfig';
 import {ProductConfig} from 'app/main/products/ProductConfig';
 import {StaffConfig} from 'app/main/staff/StaffConfig';
 import {ServiceConfig} from 'app/main/services/ServiceConfig';
 import {WelcomeConfig} from "app/main/welcome/WelcomeConfig"
-import {Client2Config} from "app/main/client2/Client2Config"
+import {ClientConfig} from "app/main/client/ClientConfig"
 
 
 const routeConfigs = [
-    ClientsConfig,
     StaffConfig,
     ServiceConfig,
     ProductConfig,
     AgendaConfig,
     WelcomeConfig,
-    Client2Config
+    ClientConfig
 ];
 
 const routes = [

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Client2Config = {
+export const ClientConfig = {
     settings: {
         layout: {
             config: {}
@@ -9,7 +9,7 @@ export const Client2Config = {
     routes  : [
         {
             path     : '/clientlist',
-            component: React.lazy(() => import('./Client2'))
+            component: React.lazy(() => import('./Client'))
         },
         {
             path:"/editclient",

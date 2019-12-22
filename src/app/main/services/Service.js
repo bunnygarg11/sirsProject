@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
-import { FusePageSimple } from "@fuse";
+import { FusePageCarded } from "@fuse";
 import ServiceModal from "./components/service";
-import Table from "./components/service_front";
+import ServiceList from "./components/service_front";
+import { Icon } from '@material-ui/core';
 
 const styles = theme => ({
   layoutRoot: {}
@@ -13,17 +14,19 @@ class Service extends Component {
     const { classes } = this.props;
 
     return (
-      <FusePageSimple
+      <FusePageCarded
         classes={{
           root: classes.layoutRoot
         }}
-        header={<div className="p-24"></div>}
-        contentToolbar={<div className="px-24"></div>}
-        content={
+        header={
           <div className="p-24">
-            <Table />
+            <h1 className="text-4xl">
+              <Icon className='text-4xl'>airline_seat_recline_normal</Icon>
+              <span>Services</span>
+            </h1>
           </div>
         }
+        content={ <ServiceList />}
       />
     );
   }
