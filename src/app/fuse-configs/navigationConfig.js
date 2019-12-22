@@ -17,7 +17,7 @@
                 'title': 'Products',
                 'type' : 'collapse',
                 'icon' : 'shopping_cart',
-                 'url': '/products',
+                 'url': '/product-listing',
                 'children': [
                     {
                         'id': 'product-listing',
