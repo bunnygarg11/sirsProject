@@ -7,6 +7,8 @@ import {StaffConfig} from 'app/main/staff/StaffConfig';
 import {ServiceConfig} from 'app/main/services/ServiceConfig';
 import {WelcomeConfig} from "app/main/welcome/WelcomeConfig"
 import {ClientConfig} from "app/main/client/ClientConfig"
+import {LoginConfig} from 'app/main/login/LoginConfig';
+import {ForgetPasswordConfig} from 'app/main/login/ForgetPasswordConfig';
 
 
 const routeConfigs = [
@@ -15,7 +17,9 @@ const routeConfigs = [
     ProductConfig,
     AgendaConfig,
     WelcomeConfig,
-    ClientConfig
+    ClientConfig,
+    LoginConfig,
+    ForgetPasswordConfig
 ];
 
 const routes = [

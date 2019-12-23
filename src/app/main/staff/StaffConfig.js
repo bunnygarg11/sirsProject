@@ -9,8 +9,6 @@ export const StaffConfig = {
   routes: [
     {
       path: "/staff",
-      // component: React.lazy(() => import("./components/staffMember"))
-
       component: React.lazy(() => import("./Staff"))
     }
   ]

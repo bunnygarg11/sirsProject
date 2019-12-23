@@ -1,78 +1,36 @@
-import React, { forwardRef,Fragment } from "react";
-// import AddBox from "material-ui/icon/AddBox"
-import MaterialTable from "material-table";
-import {Button}from "@material-ui/core"
-import EditIcon from "@material-ui/icons/Edit";
-import IconButton from "@material-ui/core/IconButton"
 
-export default function MaterialTableDemo() {
-  const [state, setState] = React.useState({
-    columns: [
-      { title: "Arrival", field: "arrivalTime", type:"time"},
-      { title: "Client", field: "name" },
-      { title: "In salon", field: "inSalon", type: "boolean" },
-      {
-        title: "Telephone#1",
-        field: "Telephone",
-        // lookup: { 34: "İstanbul", 63: "Şanlıurfa" }
-        type:"numeric"
-      },
-      {
-        title: "Telephone#2",
-        field: "Telephone",
-        // lookup: { 34: "İstanbul", 63: "Şanlıurfa" }
-        type:"numeric"
-      },
-      {
-        title: "Send Message",
-        field: "Telephone",
-        // lookup: { 34: "İstanbul", 63: "Şanlıurfa" }
-        type:"numeric"
-      },
-    //   {
-    //     title: "gdxsudsj",
-    //     filterable: false,
-    //     Cell: props => {
-    //     return (
-    //     <div>
-    //     <IconButton
-    //     onClick={() => {
-    //     this.handleClickOpen(props.original._id)
-    //     console.log("props", props.original._id);
-    //     }}
-    //     // className={classes.button}
-    //     aria-label="Delete"
-    //     >
-    //     <EditIcon />
-    //     </IconButton>
-    //     </div>
-    //     )}}
-    ],
-    data: [
-    //   { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 }
-    {arrivalTime:21,name:"Angelina Jolie",inSalon:true}
-    ],
-    title: "Demo Title",
-    actions: [
-      {
-        icon: "edit",
-        tooltip: "Save User",
-        onClick: (event, rowData) => alert("You saved " + rowData.name)
-      }
-    ]
-  });
+import React, { Component } from "react";
+import { withStyles } from "@material-ui/core/styles";
+import { FusePageCarded } from "@fuse";
+import WelcomeTable from "./components/welcomeTable";
+import { Icon } from '@material-ui/core';
 
-  return (
-      <Fragment>
-    <MaterialTable
-      title={state.title}
-      columns={state.columns}
-      data={state.data}
-      actions={state.actions}
-     
-    />
-    {/* <MaterialTable actions={state.actions}/> */}
-    </Fragment>
-  )
+const styles = theme => ({
+  layoutRoot: {}
+});
 
+class Welcome extends Component {
+  render() {
+    const { classes } = this.props;
+
+    return (
+      <FusePageCarded
+        classes={{
+          root: classes.layoutRoot
+        }}
+        header={
+          <div className="p-24">
+            <h1 className="text-4xl">
+              <Icon className='text-4xl'>home</Icon>
+              <span>Welcome</span>
+            </h1>
+          </div>
+        }
+        content={ <WelcomeTable />}
+      />
+    );
+  }
 }
+
+export default withStyles(styles, { withTheme: true })(Welcome);
+

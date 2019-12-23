@@ -45,7 +45,7 @@ class ServiceList extends Component<Props, State> {
         return (
            <React.Fragment>
                 <MaterialTable
-                    title={'Services'}
+                    title={''}
                     columns={columns}
                     data={data}
                     actions={[{

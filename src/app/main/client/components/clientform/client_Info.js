@@ -3,7 +3,7 @@ import React from "react";
 import { TextField, Grid } from "@material-ui/core";
 import { FuseChipSelect } from "@fuse";
 
-export default function ServiceModal(props) {
+export default function ClientInfo(props) {
   return (
     <div>
       <Grid container>
@@ -14,12 +14,12 @@ export default function ServiceModal(props) {
               <br/>
             <TextField
               className="mt-8 mb-16 mr-8 "
-              label="Name"
+              
               autoFocus
               id="name"
               name="name"
               required
-              // value={form.width}
+              value={props.formdata && props.formdata.name}
               // onChange={this.handleChange}
               variant="outlined"
               style={{ width: "45%" }}
@@ -30,11 +30,11 @@ export default function ServiceModal(props) {
             Telephone
             <TextField
               className="mt-8 mb-16"
-              label="Telephone"
+              
               id="Telephone"
               name="Telephone"
               required
-              // value={form.weight}
+              value={props.formdata && props.formdata.Telephone}
               // onChange={this.handleChange}
               variant="outlined"
               style={{ width: "90%" }}
@@ -45,19 +45,20 @@ export default function ServiceModal(props) {
 
             <TextField
               className="mt-8 mb-16"
-              label="Email"
+              
               id="email"
               name="email"
               required
-             
+             value={props.formdata && props.formdata.email}
               variant="outlined"
               style={{ width: "90%" }}
             />
           </div>
         </Grid>
+        
         <Grid xs={6}>
           <div className=" max-w-md pt-1">
-           
+           <br/>
             NOTES
             <TextField
               className="mb-16"
@@ -66,7 +67,7 @@ export default function ServiceModal(props) {
               // onChange={this.handleChange}
               // label="NOTES"
               type="text"
-              // value={form.description}
+              value={props.formdata && props.formdata.note}
               placeholder="Add a note regarding staff member"
               multiline
               rows={5}

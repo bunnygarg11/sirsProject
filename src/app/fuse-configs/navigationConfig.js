@@ -15,18 +15,9 @@
             {
                 'id'   : 'product-component',
                 'title': 'Products',
-                'type' : 'collapse',
+                'type' : 'item',
                 'icon' : 'shopping_cart',
-                 'url': '/product-listing',
-                'children': [
-                    {
-                        'id': 'product-listing',
-                        'title': 'Product Listing',
-                        'type': 'item',
-                        'icon': 'list',
-                        'url': '/product-listing'
-                    },
-                ]
+                 'url': '/products',
             },
             {
                 'id'   : 'service-component',
@@ -57,6 +48,13 @@
                 'icon' : 'view_list',
                 'url'  : '/clientlist'
             },
+            {
+                'id' : 'login',
+                'title': 'login',
+                'type' : 'item',
+                'icon' : 'view_list',
+                'url' : '/login'
+                }
 
         ]
     }

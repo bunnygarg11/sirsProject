@@ -10,6 +10,10 @@ export const WelcomeConfig={
         {
             path:"/welcome",
             component:React.lazy(()=>import("./Welcome"))
+        },
+        {
+            path:"/checkout",
+            component:React.lazy(()=>import("./components/checkout"))
         }
     ]
 }

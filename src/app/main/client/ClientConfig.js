@@ -13,15 +13,15 @@ export const ClientConfig = {
         },
         {
             path:"/editclient",
-            component:React.lazy(()=>import("./components/editClient"))
+            component:React.lazy(()=>import("./components/clientform/editClient"))
         },
         {
             path:"/seeclient",
-            component:React.lazy(()=>import("./components/SeeClient"))
+            component:React.lazy(()=>import("./components/Tabs/SeeClient"))
         },
         {
             path:"/newclient",
-            component:React.lazy(()=>import("./components/NewClient"))
+            component:React.lazy(()=>import("./components/clientform/NewClient"))
         }
     ]
 };
